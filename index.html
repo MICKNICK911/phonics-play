@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhonicsPlay - Fun Phonics Learning for Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header and Navigation -->
+      <header id="header">
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <h2>Phonics<span>Play</span></h2>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#lessons" class="nav-link">Lessons</a></li>
+              <li><a href="#benefits" class="nav-link">Benefits</a></li>
+              <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+              <li><a href="#" class="btn btn-primary">Get Started</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="fade-in">Making Phonics <span class="highlight">Fun</span> and <span class="highlight">Effective</span></h1>
+            <p class="fade-in delay-1">Help your child develop strong reading skills through engaging phonics lessons designed by education experts.</p>
+            <div class="hero-buttons fade-in delay-2">
+              <a href="#lessons" class="btn btn-primary">Explore Lessons</a>
+              <a href="#demo" class="btn btn-secondary">Try Demo</a>
+            </div>
+          </div>
+          <div class="hero-image fade-in delay-3">
+            <img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Children learning phonics">
+          </div>
+        </div>
+      </section>
+
+      <!-- Phonics Demo Section -->
+      <section id="demo" class="demo">
+        <div class="container">
+          <h2 class="section-title">Interactive Phonics Demo</h2>
+          <p class="section-description">Click on a sound to hear it pronounced correctly</p>
+          
+          <div class="phonics-cards">
+            <div class="phonics-card" data-sound="a">
+              <div class="phonics-letter">Aa</div>
+              <div class="phonics-word">Apple</div>
+              <div class="phonics-icon">🍎</div>
+            </div>
+            <div class="phonics-card" data-sound="b">
+              <div class="phonics-letter">Bb</div>
+              <div class="phonics-word">Ball</div>
+              <div class="phonics-icon">⚽</div>
+            </div>
+            <div class="phonics-card" data-sound="c">
+              <div class="phonics-letter">Cc</div>
+              <div class="phonics-word">Cat</div>
+              <div class="phonics-icon">🐱</div>
+            </div>
+            <div class="phonics-card" data-sound="d">
+              <div class="phonics-letter">Dd</div>
+              <div class="phonics-word">Dog</div>
+              <div class="phonics-icon">🐶</div>
+            </div>
+            <div class="phonics-card" data-sound="e">
+              <div class="phonics-letter">Ee</div>
+              <div class="phonics-word">Egg</div>
+              <div class="phonics-icon">🥚</div>
+            </div>
+            <div class="phonics-card" data-sound="f">
+              <div class="phonics-letter">Ff</div>
+              <div class="phonics-word">Fish</div>
+              <div class="phonics-icon">🐠</div>
+            </div>
+          </div>
+
+          <div id="phonics-player" class="phonics-player">
+            <div class="player-content">
+              <div id="current-letter" class="current-letter">A</div>
+              <div id="current-word" class="current-word">apple</div>
+            </div>
+            <button id="play-sound" class="play-button">
+              <span class="play-icon">▶</span> Play Sound
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lessons Section -->
+      <section id="lessons" class="lessons">
+        <div class="container">
+          <h2 class="section-title">Our Phonics Lessons</h2>
+          <p class="section-description">Structured learning paths for every stage of reading development</p>
+          
+          <div class="lesson-categories">
+            <div class="lesson-category">
+              <div class="category-icon">🔤</div>
+              <h3>Letter Sounds</h3>
+              <p>Learn individual letter sounds with fun activities and examples.</p>
+              <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="lesson-category">
+              <div class="category-icon">🔡</div>
+              <h3>Blending</h3>
+              <p>Practice combining sounds to form simple words and improve fluency.</p>
+              <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="lesson-category">
+              <div class="category-icon">📚</div>
+              <h3>Digraphs</h3>
+              <p>Master special letter combinations that make unique sounds.</p>
+              <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="lesson-category">
+              <div class="category-icon">📝</div>
+              <h3>Sight Words</h3>
+              <p>Learn common words that don't follow regular phonics patterns.</p>
+              <a href="#" class="learn-more">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section id="benefits" class="benefits">
+        <div class="container">
+          <h2 class="section-title">Why Choose PhonicsPlay?</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">👩‍🏫</div>
+              <h3>Expert-Designed</h3>
+              <p>Curriculum created by experienced educators and literacy specialists.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🧩</div>
+              <h3>Interactive Learning</h3>
+              <p>Engaging activities that make learning phonics fun and memorable.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">📊</div>
+              <h3>Progress Tracking</h3>
+              <p>Monitor your child's improvement with detailed progress reports.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🏆</div>
+              <h3>Achievement System</h3>
+              <p>Motivating rewards that celebrate milestones and encourage practice.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">📱</div>
+              <h3>Anywhere Access</h3>
+              <p>Learn on any device, anytime, with our responsive design.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🤝</div>
+              <h3>Parent Support</h3>
+              <p>Resources and guidance to help parents support learning at home.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2 class="section-title">What Parents & Teachers Say</h2>
+          <div class="testimonial-slider" id="testimonialSlider">
+            <div class="testimonial-slide active">
+              <div class="testimonial-content">
+                <p>"My daughter struggled with reading until we found PhonicsPlay. The interactive lessons made all the difference. She's now reading confidently and enjoying books!"</p>
+                <div class="testimonial-author">
+                  <h4>Sarah Johnson</h4>
+                  <p>Parent of 6-year-old</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <p>"As a kindergarten teacher, I've seen remarkable progress in my students since incorporating PhonicsPlay into our curriculum. The structured approach works!"</p>
+                <div class="testimonial-author">
+                  <h4>Michael Torres</h4>
+                  <p>Kindergarten Teacher</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <p>"The clarity of the phonics sounds and the engaging visuals keep my son interested. He asks to practice every day, which I never expected with reading lessons!"</p>
+                <div class="testimonial-author">
+                  <h4>Emma Wright</h4>
+                  <p>Parent of 5-year-old</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button id="prevTestimonial" class="slider-control">&lt;</button>
+            <div class="slider-dots" id="sliderDots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+            <button id="nextTestimonial" class="slider-control">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscribe Section -->
+      <section id="contact" class="subscribe">
+        <div class="container">
+          <h2 class="section-title">Stay Updated</h2>
+          <p class="section-description">Subscribe to receive free phonics resources and updates on new lessons</p>
+          
+          <form id="subscribeForm" class="subscribe-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+          </form>
+          <p class="form-success" id="formSuccess">Thank you for subscribing! Check your email for a confirmation.</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <h2>Phonics<span>Play</span></h2>
+              <p>Making reading fun and accessible for all children.</p>
+            </div>
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">Free Worksheets</a></li>
+                <li><a href="#">Phonics Guide</a></li>
+                <li><a href="#">Reading Tips</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <p>Email: hello@phonicsplay.com</p>
+              <p>Phone: (555) 123-4567</p>
+              <div class="social-links">
+                <a href="#" class="social-link">FB</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link">TW</a>
+                <a href="#" class="social-link">YT</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 PhonicsPlay. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
