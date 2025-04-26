@@ -259,3 +259,15 @@ button.clicked {
     transform: scale(0.9);
     filter: brightness(0.9);
 }
+
+/* Add touch feedback for mobile */
+.play-sound:active {
+    transform: scale(0.95);
+    background-color: #ff5252 !important;
+}
+
+/* Prevent touch highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
