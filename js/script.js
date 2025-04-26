@@ -1,6 +1,6 @@
 // Play phonics sound when button is clicked
 function playSound(letter) {
-    const audio = new Audio(`assets/sounds/letter-${letter}.mp3`);
+    const audio = new Audio(`assets/audio/letter-${letter}.mp3`);
     audio.play().catch(error => {
         console.log("Allow audio playback in your browser settings!");
     });
