@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonics Fun Club | Learn Letters with Fun All!</title>
+    <title>Phonics Fun Club | Learn Letters with Fun!</title>
     <script src="/js/howler.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@700&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Animated Background Elements -->
+    <div class="floating-letters">
+        <span>A</span><span>B</span><span>C</span><span>D</span>
+    </div>
+
     <!-- Header with Logo & Navigation -->
     <header class="site-header">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Phonics Fun Club Logo">
-            <h1>Phonics Fun Club</h1>
+            <img src="assets/images/logo.png" alt="Phonics Fun Club Logo" class="logo-bounce">
+            <h1 class="title-pop">Phonics Fun Club</h1>
         </div>
         <nav class="main-nav">
-            <a href="lessons.html">Lessons</a>
-            <a href="games.html">Games</a>
-            <a href="worksheets.html">Worksheets</a>
-            <a href="contact.html">Contact</a>
+            <a href="lessons.html" class="nav-link">Lessons</a>
+            <a href="games.html" class="nav-link">Games</a>
+            <a href="worksheets.html" class="nav-link">Worksheets</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section (Main Spotlight) -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>Let's Learn Phonics Together! 🎉</h2>
-            <p>Fun lessons, games, and worksheets for kids aged 3–8.</p>
-            <a href="lessons.html" class="cta-button">Start Learning Now!</a>
+        <div class="hero-content slide-in">
+            <h2 class="hero-title">Let's Learn Phonics Together! 🎉</h2>
+            <p class="hero-subtitle">Fun lessons, games, and worksheets for kids aged 3–8</p>
+            <a href="lessons.html" class="cta-button hover-grow">Start Learning Now!</a>
         </div>
     </section>
 
     <!-- Featured Lessons Preview -->
     <section class="featured-lessons">
-        <h3>Today's Featured Lesson: Letter "A"</h3>
-        <div class="lesson-preview">
-            <img src="assets/images/letter-a.png" alt="Letter A">
-            <!-- <button class="play-sound" onclick="playSound('a')">🔊 Hear the Sound</button> -->
-            <button class="play-sound" onclick="playSound1()">🔊 Play Letter A</button>
+        <h3 class="section-title">Today's Featured Lesson: Letter "A"</h3>
+        <div class="lesson-preview pop-in">
+            <img src="assets/images/letter-a.png" alt="Letter A" class="letter-float">
+            <button class="play-sound hover-jump" onclick="playSound1()">
+                <span class="sparkle">✨</span>
+                🔊 Play Letter A
+                <span class="sparkle">✨</span>
+            </button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <p>© 2023 Phonics Fun Club | Made with ❤️ for little learners!</p>
+        <p class="footer-text">© 2025 Phonics Fun Club | Made with ❤️ for little learners!</p>
     </footer>
 
     <!-- JavaScript -->

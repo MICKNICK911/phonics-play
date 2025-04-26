@@ -133,3 +133,129 @@ body {
         gap: 0.5rem;
     }
 }
+
+
+/*UPDATED*/
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+/* Enhanced Styles */
+body {
+    font-family: 'Comic Neue', cursive;
+    background: #f0f9ff;
+    overflow-x: hidden;
+}
+
+.logo-bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.title-pop {
+    font-family: 'Chewy', cursive;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 0 #ffd700;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #ff6b6b, #ffd700);
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+}
+
+.hero {
+    background: linear-gradient(135deg, #ffd700 30%, #ff6b6b 100%);
+    animation: rainbow 8s ease infinite;
+    background-size: 400% 400%;
+}
+
+.cta-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border-radius: 35px;
+    background: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.letter-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.play-sound {
+    background: #ff6b6b;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.sparkle {
+    position: absolute;
+    animation: sparkle 1s ease infinite;
+}
+
+.floating-letters span {
+    position: fixed;
+    font-size: 2rem;
+    opacity: 0.2;
+    animation: float 5s ease-in-out infinite;
+    z-index: -1;
+    font-family: 'Chewy', cursive;
+}
+
+/* Position floating letters randomly */
+.floating-letters span:nth-child(1) { left: 10%; top: 20%; }
+.floating-letters span:nth-child(2) { left: 30%; top: 70%; }
+.floating-letters span:nth-child(3) { right: 20%; top: 40%; }
+.floating-letters span:nth-child(4) { right: 10%; top: 80%; }
+
+/* Entrance animations */
+.slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+.pop-in {
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+button.clicked {
+    transform: scale(0.9);
+    filter: brightness(0.9);
+}

@@ -25,3 +25,27 @@ const sound = new Howl({
 function playSound1() {
     sound.play();
   }
+
+
+//UPDATE/
+// Add click effects to buttons
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.add('clicked');
+        setTimeout(() => this.classList.remove('clicked'), 200);
+    });
+});
+
+// Randomize floating letters
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const floatingContainer = document.querySelector('.floating-letters');
+
+for(let i = 0; i < 8; i++) {
+    const letter = letters[Math.floor(Math.random() * letters.length)];
+    const span = document.createElement('span');
+    span.textContent = letter;
+    span.style.left = `${Math.random() * 100}%`;
+    span.style.top = `${Math.random() * 100}%`;
+    span.style.animationDelay = `${Math.random() * 2}s`;
+    floatingContainer.appendChild(span);
+}
