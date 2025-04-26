@@ -18,6 +18,8 @@ document.querySelector('.cta-button').addEventListener('click', (e) => {
 // howler Initialize the sound[current Use]
 const sound = new Howl({
     src: ['assets/audio/letter-a.mp3'], // Path to your audio file
+    html5: true,
+    format: ['mp3'],
     volume: 1, // Optional: Set volume (0 to 1)
   });
   
