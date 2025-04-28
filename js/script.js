@@ -1,10 +1,10 @@
 // Play phonics sound when button is clicked [default working]
-// function playSound(letter) {
-//     const audio = new Audio(`assets/audio/letter-${letter}.mp3`);
-//     audio.play().catch(error => {
-//         console.log("Allow audio playback in your browser settings!");
-//     });
-// }
+ function playSound(letter) {
+     const audio = new Audio(`assets/audio/letter-${letter}.mp3`);
+     audio.play().catch(error => {
+         console.log("Allow audio playback in your browser settings!");
+     });
+ }
 
 // Optional: Add a simple animation to the CTA button
 document.querySelector('.cta-button').addEventListener('click', (e) => {
@@ -54,35 +54,35 @@ for(let i = 0; i < 8; i++) {
 
 
 // script.js smartphone audio howler
-let isMobileInitialized = false;
-let mobileSound = null;
+//let isMobileInitialized = false;
+//let mobileSound = null;
 
 // Mobile browsers require this initialization pattern
-function handleFirstInteraction() {
-    if (!isMobileInitialized) {
+//function handleFirstInteraction() {
+    //if (!isMobileInitialized) {
         // Initialize sounds after first user interaction
-        mobileSound = new Howl({
-            src: ['assets/audio/letter-a.m4a', 'assets/audio/letter-a.mp3'],
-            html5: true, // Required for iOS
-            onplayerror: function() {
-                mobileSound.once('unlock', function() {
-                    mobileSound.play();
-                });
-            }
-        });
-        isMobileInitialized = true;
-    }
+       // mobileSound = new Howl({
+           // src: ['assets/audio/letter-a.m4a', 'assets/audio/letter-a.mp3'],
+           // html5: true, // Required for iOS
+           // onplayerror: function() {
+              //  mobileSound.once('unlock', function() {
+                 //   mobileSound.play();
+              //  });
+          //  }
+       // });
+       // isMobileInitialized = true;
+  //  }
     
     // Now play the sound
-    if (mobileSound) {
-        mobileSound.play();
-    }
-}
+   // if (mobileSound) {
+   //     mobileSound.play();
+  //  }
+//}
 
 // For desktop (keep existing code)
-if (!/Mobi|Android/i.test(navigator.userAgent)) {
-    const desktopSound = new Howl({
-        src: ['assets/audio/letter-a.mp3']
-    });
-    document.getElementById('playA').onclick = () => desktopSound.play();
-}
+//if (!/Mobi|Android/i.test(navigator.userAgent)) {
+  //  const desktopSound = new Howl({
+  //      src: ['assets/audio/letter-a.mp3']
+   // });
+   // document.getElementById('playA').onclick = () => desktopSound.play();
+//}
